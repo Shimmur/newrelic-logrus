@@ -4,7 +4,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// A Formatter is a implements the logrus.Formatter interface and allows
+// A Formatter implements the logrus.Formatter interface and allows
 // filtering out certain fields.
 type Formatter struct {
 	formatter logrus.Formatter
