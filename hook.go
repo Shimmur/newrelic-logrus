@@ -47,7 +47,7 @@ func (n *NewRelicLogrusHook) Fire(entry *logrus.Entry) error {
 
 	return n.withTransaction(entry, func(txn newrelic.Transaction) error {
 		for k, v := range entry.Data {
-			if k!= "txn" {
+			if k != "txn" {
 				txn.AddAttribute(k, v)
 			}
 		}
